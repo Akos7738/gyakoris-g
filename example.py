@@ -10,10 +10,12 @@ def randomGenerator(s, e, a):
     return numbers
 
 def makeNumber(text):
-    while True:
+    isCorrect = False
+    while not isCorrect:
         n =  input(text)
         try:
             n = int(n)
+            isCorrect = True
             return n
         except ValueError:
             print("Helytelen érték!")
